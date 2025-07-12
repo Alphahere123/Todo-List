@@ -3,7 +3,8 @@ import React from 'react'
 import { Link } from 'react-router'
 import { PenSquareIcon,Trash2Icon } from 'lucide-react'
 import formatData from './Dates'
-import axios from 'axios'
+// import axios from 'axios'
+import api from '../../lib/axios'
 import toast from 'react-hot-toast'
 function NoteCard({note}) {
 
@@ -13,7 +14,7 @@ const handleDeleted = async (e,id) => {
     return
   }
   try {
-    await axios.delete(`http://localhost:5001/api/notes/${id}`)
+    await api.delete(`/notes/${id}`)
     toast.success('Note deleted successfully')
     // Optionally, you can refresh the notes list or redirect
     window.location.reload()
