@@ -20,6 +20,8 @@ const NotePage = () => {
   useEffect(() => {
       if (!id) {
     toast.error("Invalid note ID");
+    console.log("error in internal server");
+    
     return;
   }
 
