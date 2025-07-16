@@ -3,7 +3,7 @@ import React from 'react'
 import { useState } from 'react'
 import { Link,  useNavigate } from 'react-router'
 // import axios from 'axios'
-import api from '../lib/axios'
+import api from "../Pages/lib/axios"
 import toast from 'react-hot-toast'
 function CreatePage() {
   const [title, setTitle] = useState('')

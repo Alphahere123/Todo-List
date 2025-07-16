@@ -4,7 +4,8 @@ import { Link } from 'react-router'
 import { PenSquareIcon,Trash2Icon } from 'lucide-react'
 import formatData from './Dates'
 // import axios from 'axios'
-import api from '../../lib/axios'
+// import api from '../../lib/axios'
+import api from '../lib/axios'
 import toast from 'react-hot-toast'
 function NoteCard({note}) {
 
@@ -24,7 +25,7 @@ const handleDeleted = async (e,id) => {
   }
 }
   return (
-    <Link  to={`/note/${note.id}`}  className='card bg-base-100 hover:shadow-lg transition-all duration-200 border-t-4 border-solid border-green-500' >
+    <Link  to={`/note/${note._id}`}  className='card bg-base-100 hover:shadow-lg transition-all duration-200 border-t-4 border-solid border-green-500' >
 
 
         <div className='card-body' >

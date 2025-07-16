@@ -1,7 +1,7 @@
 import React, { useEffect,useState } from 'react'
 import Navbar from './Components/Navbar'
 // import axios from 'axios'
-import api from '../lib/axios'
+import api from "../Pages/lib/axios"
 import toast from 'react-hot-toast'
 import NoteCard from './Components/NoteCard'
 
@@ -13,7 +13,7 @@ function HomePage() {
 
 const fetchingApis= async () => { 
 try {
-  const responsed= await api.get("http://localhost:5001/api/notes")
+  const responsed= await api.get("/notes")
  console.log(responsed.data);
 setNotes(responsed.data)
 
